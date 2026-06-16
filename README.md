@@ -1,42 +1,60 @@
 # SocialGuard - Social Media Threat Intelligence Monitoring Tool
 
-SocialGuard is a Python/Streamlit prototype that monitors social-media-style data for cyber threat indicators. It supports two platform sources in demo mode (Twitter/X-style and Reddit-style records), CSV upload, preprocessing, keyword and behavioural detection, risk scoring, dashboard filtering, MITRE ATT&CK mapping, watchlist matching, analyst recommendations, and CSV/TXT reporting.
+## Overview
 
-## New enhancements in this version
-- Threat type classification, such as phishing, malware/botnet, data breach/leak, ransomware, access trading, and exploit activity.
-- MITRE ATT&CK-style mapping to tactics and techniques to support analyst investigation.
-- Threat actor/watchlist matching for terms such as LockBit, APT28, APT29, Lazarus, BlackCat/ALPHV, and Cl0p.
-- Analyst recommendations based on severity and threat type.
-- Export as CSV and analyst TXT intelligence report.
-- Optional near-real-time dashboard refresh every 30 seconds using `streamlit-autorefresh`.
+SocialGuard is a cybersecurity-focused threat intelligence platform built using Python and Streamlit. The application analyses social-media-style content and identifies potential cyber threat indicators using keyword detection, behavioural analysis, threat classification, and MITRE ATT&CK mapping.
 
-## Run
-```bash
-pip install -r requirements.txt
-python -m streamlit run app.py
-```
+## Key Features
 
-## Test
-```bash
-pytest
-```
+* Social media threat monitoring
+* Threat type classification
+* Risk scoring and prioritisation
+* MITRE ATT&CK tactic and technique mapping
+* Watchlist matching
+* Analyst recommendations
+* Interactive dashboard visualisation
+* CSV and intelligence report export
+* Near-real-time monitoring support
 
-## Input CSV schema
-`id, source, user, text, timestamp, post_count, account_age_days, follower_count`
+## Technologies Used
 
-## Detection model
-- Keyword match: +2
-- Multiple keyword matches: +1
-- High posting activity: +3
-- New account: +2
-- Low-reputation/high-activity pattern: +1
-- Watchlist match: +3
-- Score >= 8: Critical Risk
-- Score >= 5: High Risk
-- Score >= 2: Medium Risk
-- Otherwise: Low Risk
+* Python
+* Streamlit
+* Pandas
+* Plotly
+* MITRE ATT&CK Framework
 
-## Demo explanation
-The tool follows this pipeline:
+## Threat Categories
 
-`Data input -> Preprocessing -> Threat detection -> Risk scoring -> MITRE mapping -> Dashboard visualisation -> Report export`
+* Phishing
+* Malware
+* Botnet Activity
+* Ransomware
+* Data Breaches
+* Credential Theft
+* Exploit Activity
+
+## Dashboard Capabilities
+
+* Risk distribution analysis
+* Threat category visualisation
+* MITRE ATT&CK mapping
+* Prioritised alert monitoring
+* Threat intelligence reporting
+
+## Project Purpose
+
+This project was developed to demonstrate practical cybersecurity skills in threat intelligence, security analytics, data visualisation, and incident investigation workflows.
+
+## Future Improvements
+
+* Live API integrations
+* Additional social media sources
+* Automated threat feeds
+* Threat actor profiling
+* SOC analyst workflow integration
+
+## Author
+
+Riza Khan
+Cybersecurity Student
